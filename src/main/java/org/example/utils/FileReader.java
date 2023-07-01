@@ -26,8 +26,7 @@ public class FileReader {
                 line = line.trim();
                 if (!line.isEmpty()) {
                     String finalLine = line;
-                    Thread consumerThread = new Thread(() -> processLine(finalLine));
-                    consumerThread.start();
+                    processLine(finalLine);
                 }
             }
         } catch (IOException e) {
